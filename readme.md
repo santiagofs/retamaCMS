@@ -18,7 +18,8 @@ run command: php artisan migrate
 
 ##### Make the storage folder writable
 run command: sudo chgrp -R _www storage 
-run command: sudo chgrp -R _www storage
+
+run command: sudo chmod -R ug+rwx storage
 
 ##### Generate the encryption key
 run command: php artisan key:generate
