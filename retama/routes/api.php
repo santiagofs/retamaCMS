@@ -27,4 +27,13 @@ Route::post('recover', 'AuthController@recover');
 
 Route::group(['middleware' => ['jwt.auth']], function() {
     Route::get('logout', 'AuthController@logout');
+
+    
+});
+
+
+Route::get('config', function(Request $request) {
+    $config = config('site');
+    return response()->json(['config'=> $config]);
+
 });
