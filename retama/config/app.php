@@ -178,7 +178,9 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+
         Site\ServiceProvider::class,
+        Modules\Core\ServiceProvider::class,
         
     ],
 

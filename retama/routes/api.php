@@ -33,7 +33,7 @@ Route::group(['middleware' => ['jwt.auth']], function() {
 
 
 Route::get('config', function(Request $request) {
-    $config = config('site');
+    $config = config('retama');
     return response()->json(['config'=> $config]);
 
 });
