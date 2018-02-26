@@ -12,6 +12,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
     public function register() 
     {
         $this->mergeConfigFrom(
+            __DIR__.'/defaults/config.php', 'retamaFront'
+        );
+        $this->mergeConfigFrom(
             __DIR__.'/config.php', 'retama'
         );
     }
