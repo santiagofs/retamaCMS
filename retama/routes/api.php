@@ -28,28 +28,31 @@ Route::post('recover', 'AuthController@recover');
 Route::group(['middleware' => ['jwt.auth']], function() {
     Route::get('logout', 'AuthController@logout');
 
-    
+
 });
 
 
 Route::get('settings', function(Request $request) {
     $base = array_dot(\Config::get('retamaBack'));
-    
+
     $front = array_dot(\Config::get('retamaFront'));
-    var_dump($front);
+
     foreach($front as $key => $value) {
         $base[$key] = $value;
     }
-    
+
     $site = array_dot(\Config::get('retama'));
     foreach($site as $key => $value) {
         $base[$key] = $value;
     }
-    var_dump($base);
     $ret = [];
     foreach($base as $key => $value) {
         array_set($ret, $key, $value);
     }
     return response()->json($ret);
+
+});
+
+Route::post('settings', function(Request $request) {
 
 });
