@@ -9,9 +9,8 @@ cd retama
 run command: composer update
 ```
 ##### App configuration
-```
 duplicate and rename .env.example to .env with proper configuration
-```
+
 ##### Enable JWT
 ```
 run command: php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
