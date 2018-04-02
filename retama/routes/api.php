@@ -18,7 +18,8 @@ use Illuminate\Http\Request;
 // });
 
 Route::get('/', function(Request $request) {
-    return response()->json(['version'=> '1.0.0']);
+    $laravel = app();
+    return response()->json(['api-version'=> '1.0.0', 'laravel-version' => $laravel::VERSION]);
 });
 
 Route::post('register', 'AuthController@register');
@@ -28,19 +29,19 @@ Route::post('recover', 'AuthController@recover');
 Route::group(['middleware' => ['jwt.auth']], function() {
     Route::get('logout', 'AuthController@logout');
 
-    
+
 });
 
 
 Route::get('settings', function(Request $request) {
     $base = array_dot(\Config::get('retamaBack'));
-    
+
     $front = array_dot(\Config::get('retamaFront'));
     var_dump($front);
     foreach($front as $key => $value) {
         $base[$key] = $value;
     }
-    
+
     $site = array_dot(\Config::get('retama'));
     foreach($site as $key => $value) {
         $base[$key] = $value;
