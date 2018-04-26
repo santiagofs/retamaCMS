@@ -22,15 +22,13 @@ Route::get('/', function(Request $request) {
     return response()->json(['api-version'=> '1.0.0', 'laravel-version' => $laravel::VERSION]);
 });
 
-Route::post('register', 'AuthController@register');
-Route::post('login', 'AuthController@login');
-Route::post('recover', 'AuthController@recover');
+// Route::post('register', 'AuthController@register');
+// Route::post('login', 'AuthController@login');
+// Route::post('recover', 'AuthController@recover');
 
-Route::group(['middleware' => ['jwt.auth']], function() {
-    Route::get('logout', 'AuthController@logout');
-
-
-});
+// Route::group(['middleware' => ['jwt.auth']], function() {
+//     Route::get('logout', 'AuthController@logout');
+// });
 
 
 Route::get('settings', function(Request $request) {
@@ -57,3 +55,6 @@ Route::get('settings', function(Request $request) {
 Route::post('settings', function(Request $request) {
 
 });
+
+// Authentication routes with JW Token
+require_once('partials/jwt.php');

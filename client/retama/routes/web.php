@@ -25,5 +25,5 @@ $prefix = '';
 
 
 Route::group(array('prefix' => $prefix), function() use($prefix) {
-    var_dump($prefix);
+    // var_dump($prefix);
 });
