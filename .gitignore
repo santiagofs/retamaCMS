@@ -11,3 +11,4 @@ npm-debug.log
 yarn-error.log
 /client/.env
 !/client/retama/config/database.php
+client/retama/\.env
