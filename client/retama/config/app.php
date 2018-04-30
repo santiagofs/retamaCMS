@@ -181,6 +181,7 @@ return [
 
         Site\ServiceProvider::class,
         Modules\Core\ServiceProvider::class,
+        Modules\Content\ServiceProvider::class,
         Modules\International\ServiceProvider::class,
 
     ],

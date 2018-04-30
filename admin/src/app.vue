@@ -9,8 +9,8 @@
 export default {
   name: 'app',
   beforeCreate () {
-    this.$store.dispatch('settings/getSettings')
-    console.log('app before create')
+    // this.$store.dispatch('settings/getSettings')
+    // console.log('app before create s')
   }
 }
 </script>

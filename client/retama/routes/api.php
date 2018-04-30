@@ -58,3 +58,5 @@ Route::post('settings', function(Request $request) {
 
 // Authentication routes with JW Token
 require_once('partials/jwt.php');
+require_once('partials/users.php');
+require_once('partials/admins.php');

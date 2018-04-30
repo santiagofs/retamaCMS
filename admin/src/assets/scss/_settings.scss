@@ -1,4 +1,4 @@
-@import "~bulma/sass/utilities/_all";
+@import "~bulma/sass/utilities/initial-variables";
 @import "~bulma/sass/utilities/functions";
 
 
@@ -16,9 +16,20 @@ $family-sans-serif: 'OpenSans', Helvetica, Arial, sans-serif;
 $family-primary: $family-sans-serif;
 
 $turquoise: #198DA2;
+// mgt
+$mgt: #4A8DC9;
+$saffron: #F2C342;
+$success: #4D8916; // #5ECBA3;
+$danger: #DC481D;
 
-$primary: $turquoise;
-$primary-invert: findColorInvert($turquoise);
+
+// saffron gradient https://mycolor.space/?hex=%23F2C342&sub=1
+// #97B84D,#48A369, #00867A #096774 #2F4858
+// saffron skip
+// #FFC2B1 #FD8B7C #C0564B
+
+$primary: $success;
+$primary-invert: findColorInvert($primary);
 $danger: $orange;
 
 // 4. Setup your Custom Colors
